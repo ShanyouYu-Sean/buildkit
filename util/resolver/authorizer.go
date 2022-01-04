@@ -173,6 +173,7 @@ func (a *dockerAuthorizer) AddResponses(ctx context.Context, responses []*http.R
 						// return a custom error which is a ErrNotImplemented to skip retries
 						return ErrCrossRepositoryBlobMount
 					}
+					return err
 				}
 			}
 
